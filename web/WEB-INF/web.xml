@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>UploadController</servlet-name>
+        <servlet-class>shop.UploadController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadController</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ShowController</servlet-name>
+        <servlet-class>shop.ShowController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowController</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DetailContrller</servlet-name>
+        <servlet-class>shop.DetailController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailContrller</servlet-name>
+        <url-pattern>/detail</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ImgController</servlet-name>
+        <servlet-class>shop.ImgController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImgController</servlet-name>
+        <url-pattern>/img</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AuthController</servlet-name>
+        <servlet-class>User.AuthController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthController</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartController</servlet-name>
+        <servlet-class>User.CartController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartController</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    <filter>
+        <filter-name>UploadFilter</filter-name>
+        <filter-class>shop.UploadFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UploadFilter</filter-name>
+        <servlet-name>UploadController</servlet-name>
+    </filter-mapping>
+    <filter>
+        <filter-name>DetailFilter</filter-name>
+        <filter-class>shop.DetailFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>DetailFilter</filter-name>
+        <url-pattern>/detail</url-pattern>
+    </filter-mapping>
+
+</web-app>
